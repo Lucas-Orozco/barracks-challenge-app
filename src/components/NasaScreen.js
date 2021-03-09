@@ -24,13 +24,12 @@ export const NasaScreen = () => {
     exp = explanation.slice(0, 110);
   }
   return (
-    <div className='slider-container'>
+    <div className="slider-container">
       <Slider classNames={horizontalcss} direction="horizontal">
         <div
+          className="img-jumbotron"
           style={{
-            background:`url('${news.url}') no-repeat center center`,
-            backgroundSize: 'cover',
-            borderRadius:'8px'
+            background: `url('${news.url}') no-repeat center center`,
           }}
         >
           <div className="text-container">
@@ -39,7 +38,7 @@ export const NasaScreen = () => {
           <div>
             <p className="parrafo-texto">{exp}</p>
           </div>
-          <span className='span-text'>{'Copyright: ' + copyright}</span>
+          <span className="span-text">{"Copyright: " + copyright}</span>
         </div>
       </Slider>
     </div>

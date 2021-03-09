@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import image from "../img/background-login.jpg";
 const user = {
   mail: "testdeveloper@barracks.gg",
@@ -16,9 +16,12 @@ const requestConfig = {
   },
   body: JSON.stringify(user),
 };
-document.body.style.backgroundImage = `url(${image})`;
+
 export const LoginScreen = () => {
+  document.body.style.backgroundImage = `url(${image})`;
+  let history = useHistory();
   const handleSubmit = async (e) => {
+    e.preventDefault(); 
     const resp = await fetch(
       "https://beta-api.barracks.gg/v2/Auth/Authenticate",
       requestConfig
@@ -26,7 +29,7 @@ export const LoginScreen = () => {
     const { token } = await resp.json();
     localStorage.setItem("token", token);
 
-    <Redirect to="/account/data" />;
+    history.push('/account/data');
   };
 
   return (

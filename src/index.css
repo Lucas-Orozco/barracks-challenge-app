@@ -117,12 +117,14 @@ code {
   border-radius: 6px;
 }
 .token-text {
-  font-style: unset;
+  position: inherit;
   font-weight: lighter;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 11px;
   color: white;
+  text-align:justify;
+  padding-left:10px;
 }
+
 
 /* tabs */
 /* Style the tab */
@@ -164,6 +166,12 @@ code {
 }
 .tab-pokemon:hover {
   background: #200f5e;
+}
+.tab-desactive{
+  background: #2C167A;
+mix-blend-mode: normal;
+opacity: 0.5;
+border-radius: 6px 0px 0px 0px;
 }
 .tab-contenedor {
   position: absolute;
@@ -208,6 +216,14 @@ border-radius: 6px;
 color:white;
 
 }
-.img-container{
-  
+.img-jumbotron{
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.container-pokemon{
+  width: 320px;
+  margin-left:35%;
+  margin-top:10%;
+
 }

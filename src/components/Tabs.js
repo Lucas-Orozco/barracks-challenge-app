@@ -12,10 +12,10 @@ export const Tabs = () => {
   return (
     <div>
       <div className="tab">
-        <button className="tab-nasa" onClick={abrirNasa}>
+        <button className={tabs==='nasa'?'tab-nasa':'tab-nasa tab-desactive'} onClick={abrirNasa}>
           Nasa
         </button>
-        <button className="tab-pokemon" onClick={abrirPokemon}>
+        <button className={tabs==='pokemon'?'tab-pokemon':'tab-pokemon tab-desactive'} onClick={abrirPokemon}>
           Pokemon
         </button>
       </div>
